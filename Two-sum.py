@@ -19,3 +19,11 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
             if val in dict:
                 return [dict[val],i]
             dict.update({nums[i] : i})
+
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dicts={}
+        for i, num in enumerate(nums):
+            if target - num in dicts.keys():
+                return [dicts[target-num], i]
+            else:
+                dicts[num] = i
