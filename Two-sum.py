@@ -11,3 +11,12 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
                 else:
                     pass
         return l
+
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+        l=[]
+        dict={}
+        for i in range(0,len(nums)):
+            val = target - nums[i]
+            if val in dict:
+                return [dict[val],i]
+            dict.update({nums[i] : i})
